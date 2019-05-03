@@ -1,26 +1,560 @@
-*{
-	margin: 0;
-	box-sizing: border-box;
-}
-body, html{
+html, body {
 	height: 100%;
-	font-family: 'Cousine', monospace;
-	font-size: 18px;
+	width: 100%;
+	box-sizing: border-box;
+	
 }
-body{
-  	display: flex;
-  	flex-direction: column;
+
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+	background-color: #e9e9e9;
+	margin:0;
 }
-main{
-  	flex: 1 0 auto;
-  	text-align: center;
+
+/*-----------------------------NAVBAR------------------------------------------------*/
+
+nav div#nav-border{
+	height: 10px;
+	background-color: #2ca243;
+
 }
-header{
-	padding: 20px;
-	border-bottom: 1px solid black;
+
+nav#navbar {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 100%;	
+	background-color: #555;
+	z-index: 1;
+	text-align: right;
 }
-footer{
-	padding: 20px;
+
+div#enter {
+	width: 80%;
+	margin: auto;
+}
+
+div#enter div {
+	padding: 20px 0;
+	border-top: none;
+	border-bottom: none;	
+	width: 100px;
 	text-align: center;
-	border-top: 1px solid black;
+	cursor: pointer;
+	font-weight: bold;
+	color: white;
+	float: right;
+}
+
+div#enter div:hover{
+	background-color: #2ca243;
+	color: white;
+}
+
+div#enter div#home {
+	background-color: #2ca243;
+	padding: 10px;
+	width: 50px;
+	float: left;
+	text-align: center;
+
+}
+
+img.nav-icon {
+	height: 35px;
+}
+
+/*-----------------------------CREAR REMEDIO-----------------------------------------*/
+
+div#crear-remedio {
+	position: fixed;
+	bottom: 2%;
+	right: 2%;
+	height: 80px;
+	width: 80px;
+	border-radius: 50%;
+	background-color: #2ca243;
+	cursor: pointer;
+}
+
+div#crear-remedio:hover {
+	box-shadow: 0 0 20px rgba(33,33,33,.2); 
+}
+
+div#crear-remedio img {
+	height: 80%;
+	transform: translateX(10%) translateY(10%);
+
+}
+
+/*-----------------------------PORTADA------------------------------------------------*/
+div#portada {
+	width: 768px;
+	height: 50vh;
+	margin: 10% auto 0 auto;
+}
+
+img#knodit {
+	width: 100%;
+	/*margin:  20px 25% 0 25% ;*/
+	margin-top: 20px;
+}
+
+
+/*-----------------------------BUSCADOR------------------------------------------------*/
+
+.search {
+  width: 100%;
+  position: relative
+}
+
+.searchTerm {
+  float: left;
+  width: 100%;
+  border: 3px solid #2ca243;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px;
+  outline: none;  
+}
+
+.searchButton {
+  position: absolute;  
+  right: -50px;
+  width: 40px;
+  height: 36px;
+  border: 1px solid #2ca243;
+  background: #2ca243;
+  text-align: center;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+
+.wrap{
+  width: 70%;
+  margin: 5% 32%;
+  transform: translateX(-30%);
+}
+
+div#radios {
+	
+	margin: 10px auto;
+	text-align: center;
+	position: relative;
+	bottom: -20px;
+}
+
+div#radios input {
+	margin-right: 4%;
+	padding: 10px 0;
+}
+
+
+div#radios input.marginlft {
+	margin-left: 4%;	
+}
+
+
+
+
+/*-----------------------------CARD CONTAINER---------------------------------------*/
+
+div#contenedor-cards {
+
+	display: flex;
+	flex-wrap: wrap;
+	width: 80%;
+	justify-content: space-between;
+	margin: 0 auto;
+}
+
+/*-----------------------------CARDS------------------------------------------------*/
+div.card {
+	width: 330px;
+	height: 450px;	
+	border-radius: 10px;
+	background-color: white;
+	transition: box-shadow .3s;
+	text-align: left;
+	position: relative;	
+	cursor: pointer;
+	margin: 1% 1%;
+}
+
+div.card div.mascara {
+	background-color: rgba(0,0,0,.3);
+	width: 100%;
+	height: 100%;
+	position: relative;
+	display: none;	
+}
+
+.card:hover {
+  box-shadow: 0 0 20px rgba(33,33,33,.2); 
+}
+
+/*S'haura de canviar la URL x Knodit de la img*/ 
+
+.card div.image {
+
+	height: 250px;
+	background-size: cover;
+	background-position: center;
+}
+
+
+/*PER A QUE EL FOOTER QUEDI ABAIX */
+div.card div.social {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	
+}
+
+div.card .typeremedy {
+	font-size: 1.2em;
+	padding: 2% 0;
+	text-align: center;
+	letter-spacing: 4px;
+}
+
+
+.card .social {
+	text-align: center;
+	margin: 2% 0;	
+}
+
+.card .visits {
+	width: 25%;
+	float: right;
+}
+
+.card .rank {
+	width: 50%;
+	float: right;
+}
+
+.card .border {
+	height: 5px;
+	background-color: #009150;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	margin:0;
+
+}
+
+div.card div.text {
+	margin: 5% 20px;
+	color: #353B3F;
+}
+
+.ingredients {margin-top: 20%;}
+
+.hoja{
+	height: 20px;
+	width: 20px;
+}
+
+.centr_iz{margin-left: 33%}
+
+.card .visits{margin-right:22%;}
+
+.card div.name {
+	margin: 5% 20px;
+	text-align: center;
+	color: black;
+}
+
+.card .foot-masc {
+	
+	position: absolute;
+	bottom: 0;
+	height: 15%;
+	width: 100%;
+	margin-bottom: 2%;
+		
+}
+
+.save, .author {
+	
+	float: left;
+	width: 10%;		
+}
+
+div.save {
+	width: 30%;
+	text-align: right;
+}
+
+.save {
+	margin: 0 4% 0 16%}
+
+.author {margin: 0 36% 0 4%}
+
+.card .foot-masc img {
+	height: 30px;
+}
+
+.nlikes {
+	color: white;
+	font-size: 1.2em;
+	vertical-align: middle;
+	margin-right: 10%; 
+	position: relative;
+	bottom: 9px;
+}
+
+/*-----------------------------MODAL LOGIN-----------------------------------------*/
+
+.popupContainer a, .popupContainer div, .popupContainer input {
+	border-radius: 5px;
+}
+
+
+
+.popupContainer {
+		position: absolute;
+		width: 450px;
+		height: auto;
+		left: 45%;
+		top: 60px;
+		background: #FFF;
+		transform: translateX(-50%) translateY(-50%);
+		
+}
+
+#modal {
+	position: fixed;
+	top: 50%;
+	right:50%;
+	transform: translateX(50%) translateY(50%);
+	z-index: 1;
+}
+
+#modal_trigger {
+		margin: 40px auto;
+		width: 200px;
+		display: block;
+		border: 1px solid #DDD;
+		border-radius: 4px;
+}
+
+.btn {
+		padding: 10px 20px;
+		background: #F4F4F2;
+}
+
+.btn_green {
+		background: #2ca243;
+		color: #FFF;
+}
+
+.btn:hover {
+		background: #E4E4E2;
+}
+
+.btn_green:hover {
+		background: #2ca243;
+}
+
+a.btn {
+		color: #666;
+		text-align: center;
+		text-decoration: none;
+}
+
+a.btn_green {
+		color: #FFF;
+}
+
+.one_half {
+		width: 50%;
+		display: block;
+		float: left;
+}
+
+.one_half.last {
+		width: 45%;
+		margin-left: 5%;
+}
+/* Popup Styles*/
+
+.popupHeader {
+		font-size: 16px;
+		text-transform: uppercase;
+}
+
+.popupHeader {
+		background: #F4F4F2;
+		position: relative;
+		padding: 10px 20px;
+		border-bottom: 1px solid #DDD;
+		font-weight: bold;
+}
+
+.popupHeader .modal_close {
+		position: absolute;
+		right: 0;
+		top: 0;
+		padding: 10px 15px;
+		background: #E4E4E2;
+		cursor: pointer;
+		color: #aaa;
+		font-size: 16px;
+}
+
+.popupBody {
+		padding: 20px;
+}
+/* Social Login Form */
+
+.social_login {}
+
+.social_login .social_box {
+		display: block;
+		clear: both;
+		padding: 10px;
+		margin-bottom: 10px;
+		background: #F4F4F2;
+		overflow: hidden;
+}
+
+.social_login .icon {
+		display: block;
+		width: 10px;
+		padding: 5px 10px;
+		margin-right: 10px;
+		float: left;
+		color: #FFF;
+		font-size: 16px;
+		text-align: center;
+}
+
+.social_login .fb .icon {
+		background: #3B5998;
+}
+
+.social_login .google .icon {
+		background: #DD4B39;
+}
+
+.social_login .icon_title {
+		display: block;
+		padding: 5px 0;
+		float: left;
+		font-weight: bold;
+		font-size: 16px;
+		color: #777;
+}
+
+.social_login .social_box:hover {
+		background: #E4E4E2;
+}
+
+.centeredText {
+		text-align: center;
+		margin: 20px 0;
+		clear: both;
+		overflow: hidden;
+		text-transform: uppercase;
+}
+
+.action_btns {
+		padding: 10px;
+		clear: both;
+		overflow: hidden;
+}
+
+.action_btns a {
+		display: block;
+}
+/* User Login Form */
+
+.user_login {
+		display: none;
+}
+
+.user_login label {
+		display: block;
+		margin-bottom: 5px;
+}
+
+.user_login input[type="text"],
+.user_login input[type="email"],
+.user_login input[type="password"] {
+		display: block;
+		width: 90%;
+		padding: 10px;
+		border: 1px solid #DDD;
+		color: #666;
+}
+
+.user_login input[type="checkbox"] {
+		float: left;
+		margin-right: 5px;
+}
+
+.user_login input[type="checkbox"]+label {
+		float: left;
+}
+
+.user_login .checkbox {
+		margin-bottom: 10px;
+		clear: both;
+		overflow: hidden;
+}
+
+.forgot_password {
+		display: block;
+		margin: 20px 0 10px;
+		clear: both;
+		overflow: hidden;
+		text-decoration: none;
+		color: #2ca243;
+}
+/* User Register Form */
+
+.user_register {
+		display: none;
+}
+
+.user_register label {
+		display: block;
+		margin-bottom: 5px;
+}
+
+.user_register input[type="text"],
+.user_register input[type="email"],
+.user_register input[type="password"] {
+		display: block;
+		width: 90%;
+		padding: 10px;
+		border: 1px solid #DDD;
+		color: #666;
+}
+
+.user_register input[type="checkbox"] {
+		float: left;
+		margin-right: 5px;
+}
+
+.user_register input[type="checkbox"]+label {
+		float: left;
+}
+
+.user_register .checkbox {
+		margin-bottom: 10px;
+		clear: both;
+		overflow: hidden;
+}
+
+#validation {
+	width: 50%;
+	text-align: center;
+	margin: 0 25%;
 }
