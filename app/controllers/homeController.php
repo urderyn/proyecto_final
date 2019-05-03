@@ -36,6 +36,9 @@ class homeController extends Controller {
 
             echo json_encode($validar->validarLogin($_POST));
 
+            $_SESSION['user'] = $_POST['username'];
+
+
         }else {
 
             header('Location: ' . BASE_DOMAIN_DIR_URL . 'webroot/404.php');
